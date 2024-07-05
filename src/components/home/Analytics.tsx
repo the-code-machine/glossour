@@ -127,7 +127,7 @@ export default function Analytics() {
             <Space h={16} />
             <motion.div ref={ref3} initial="hidden"
                 animate={inView3 ? "visible" : "hidden"}
-                variants={containerVariants} className=" w-full flex space-x-10 py-10 justify-center items-center">
+                variants={containerVariants} className=" analytics-section-3 w-full flex space-x-10 py-10 justify-center items-center">
                 <motion.div variants={cardVariants} className=" w-full">
                     <img src="https://via.placeholder.com/300" alt="Team Image" className="rounded-lg w-full h-96" />
 

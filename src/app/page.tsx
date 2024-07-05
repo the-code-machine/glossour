@@ -15,6 +15,7 @@ export default function page() {
       <CustomerReview />
       <Space h={16} />
       <ServicesBrief />
+      <Space h={16} />
     </div>
   )
 }

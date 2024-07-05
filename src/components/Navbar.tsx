@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { Tabs } from './utils/Dropdown';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 interface NavbarProps {
 }
@@ -29,9 +31,26 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
     const [path, setPath] = useState('');
 
 
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo('.navbar', { opacity: 1, display: 'flex' }, {
+            scrollTrigger: {
+                trigger: '.analytics-section-3',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1,
+                toggleActions: 'play none none none',
+            },
+            opacity: 0,
+            display: 'none',
+            duration: 0.5
 
+
+        })
+
+    }, [])
     return (
-        <nav className=' xl:max-w-5xl lg:max-w-lg md:max-w-md  z-[100] backdrop-blur-md backdrop-filter bg-opacity-30 bg-secondary-300    sm:max-w-sm  max-w-xs top-5  fixed rounded-2xl   border-tertiary-200 border-2   right-0 left-0 mx-auto  p-3 text-[14px]  font-medium  justify-between items-center    text-white flex space-x-3'>
+        <nav className=' navbar xl:max-w-5xl lg:max-w-lg md:max-w-md  z-[100] backdrop-blur-md backdrop-filter bg-opacity-30 bg-secondary-300    sm:max-w-sm  max-w-xs top-5  fixed rounded-2xl   border-tertiary-200 border-2   right-0 left-0 mx-auto  p-3 text-[14px]  font-medium  justify-between items-center    text-white flex space-x-3'>
 
             <div className=' flex justify-start  items-center'>
                 <Link href={'/'}>

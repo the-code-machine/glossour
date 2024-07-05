@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 const cardVariants = {
     hidden: {
         opacity: 0,
@@ -31,9 +32,16 @@ const containerVariants = {
 }
 
 interface ServicesCardProps {
+    subtitle: string;
+    title: string;
+    description: string;
+    image: string;
+    features: string[];
+    buttonText: string;
+    buttonLink: string;
 }
 
-const ServicesCard: React.FC<ServicesCardProps> = ({ }) => {
+const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, description, image, features, buttonLink, buttonText }) => {
     const [ref3, inView3] = useInView({
         triggerOnce: true,
         threshold: 0.4
@@ -45,19 +53,20 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ }) => {
                 variants={containerVariants} className=" w-full flex space-x-10 py-10 justify-center items-center">
 
                 <motion.div variants={cardVariants} className="w-full rounded-lg flex flex-col justify-start items-start h-full">
-                    <p className=' text-paragraph-200 text-xs my-1'>SOFTWARE SOLUTION</p>
-                    <h2 className="text-4xl  font-bold mb-4 text-white">Creating success using cutting-edge software</h2>
-                    <p className="mb-4 text-paragraph-200 text-sm">Page users the foundationally powers of our 40 unique call centers to proactively drive growth but also inspire change. With your fingertips, businesses can... </p>
-                    <ul className=' grid md:grid-cols-2 grid-cols-1 gap-3 mb-5'>
-                        <li className='font-light flex justify-start items-center text-white  '> <span className=' rounded-full p-1 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={10} /></span>Scaliblity and Adaptiblity</li>
-                        <li className='font-light flex justify-start items-center text-white'> <span className=' rounded-full p-1 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={10} /></span>Relaiblity and Performance</li>
-                        <li className='font-light flex justify-start items-center text-white'> <span className=' rounded-full p-1 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={10} /></span>Continuous Innovationn</li>
-                        <li className='font-light flex justify-start items-center text-white'> <span className=' rounded-full p-1 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={10} /></span>Innovative Features</li>
+
+                    <h2 className="text-4xl  font-bold mb-4 text-white">{title}</h2>
+                    <p className="mb-4 text-paragraph-200 text-sm">{description}</p>
+                    <ul className=' grid  grid-cols-1 gap-3 mb-5'>
+                        {
+                            features.map((feature, index) => (<li className='font-light flex justify-start items-center text-white  text-sm '> <span className=' rounded-full p-0.5 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={8} /></span>{feature}</li>))
+                        }
+
+
                     </ul>
-                    <button className=' bg-button-gradient rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5  justify-center font-normal items-center text-sm '><span>EXPLORE MORE</span><span className=' ml-2'><img src='/icons/right-arrow.svg' /></span></button>
+                    <Link href={buttonLink}>   <button className=' bg-button-gradient mt-8 rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5  justify-center font-normal items-center text-sm '><span>{buttonText}</span><span className=' ml-2'><img src='/icons/right-arrow.svg' /></span></button></Link>
                 </motion.div>
                 <motion.div variants={cardVariants} className=" w-full">
-                    <img src="https://via.placeholder.com/300" alt="Team Image" className="rounded-lg w-full h-96" />
+                    <img src={image} alt="Team Image" className="rounded-lg w-full h-96" />
 
                 </motion.div>
             </motion.div>
