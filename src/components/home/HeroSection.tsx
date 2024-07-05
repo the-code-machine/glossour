@@ -11,7 +11,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 <div className=' px-3 py-2 border border-tertiary-200  text-white w-[97%]  font-light text-[20px] rounded-md my-5'>
                     Cutting-Edge Strategies, One Click Away.                </div>
                 <p className=' text-paragraph-200 font-light text-lg'>
-                    Elevating Digital Presence and Strategy with Customized, Agile Tech Solutions
+                    Transforming Your Online Presence with Tailored, Agile Marketing Solutions
                 </p>
             </div>
             <div className='w-full justify-end items-center flex'>
