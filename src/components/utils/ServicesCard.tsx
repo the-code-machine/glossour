@@ -58,7 +58,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
                     <p className="mb-4 text-paragraph-200 text-sm">{description}</p>
                     <ul className=' grid  grid-cols-1 gap-3 mb-5'>
                         {
-                            features.map((feature, index) => (<li className='font-light flex justify-start items-center text-white  text-sm '> <span className=' rounded-full p-0.5 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={8} /></span>{feature}</li>))
+                            features.map((feature, index) => (<li key={index + 1} className='font-light flex justify-start items-center text-white  text-sm '> <span className=' rounded-full p-0.5 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={8} /></span>{feature}</li>))
                         }
 
 
