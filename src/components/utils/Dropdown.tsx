@@ -288,11 +288,11 @@ const Blog: React.FC = () => {
 
 const TABS: TabType[] = [
     {
-        title: "Services",
+        title: "About us",
         Component: Products,
     },
     {
-        title: "Projects",
+        title: "Services",
         Component: Pricing,
     },
     {
