@@ -53,7 +53,9 @@ export default function Analytics() {
                 </div>
                 <div className='1/3 text-paragraph-200 text-xs font-normal flex justify-center items-center'>
                     <p className='w-4/5'>
-                        Gain valuable insights from your website, web app, or mobile app analytics to enhance your marketing strategies.</p>
+                        Gain valuable insights from your website, web app, or mobile app analytics to enhance your marketing strategies. Harness the power of data to make informed decisions and stay ahead in the competitive market.
+
+</p>
                 </div>
             </div>
 
