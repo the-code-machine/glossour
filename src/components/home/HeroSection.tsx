@@ -9,8 +9,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             <div className=' w-full flex flex-col justify-start '>
                 <h1 style={{ lineHeight: 1 }} className='text-[4.5rem] font-bold text-white'>MARKETING & PROMOTION</h1>
                 <div className=' px-3 py-2 border border-tertiary-200  text-white w-[97%]  font-light text-[20px] rounded-md my-5'>
-                    INNOVATIVE APPROACHES, JUST A CLICK AWAY.
-                </div>
+                    Cutting-Edge Strategies, One Click Away.                </div>
                 <p className=' text-paragraph-200 font-light text-lg'>
                     Elevating Digital Presence and Strategy with Customized, Agile Tech Solutions
                 </p>
