@@ -55,7 +55,7 @@ export default function Analytics() {
                     <p className='w-4/5'>
                         Gain valuable insights from your website, web app, or mobile app analytics to enhance your marketing strategies. Harness the power of data to make informed decisions and stay ahead in the competitive market.
 
-</p>
+                    </p>
                 </div>
             </div>
 
@@ -121,7 +121,7 @@ export default function Analytics() {
                     <button className=' bg-button-gradient rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5  justify-center font-normal items-center text-sm '><span>EXPLORE MORE</span><span className=' ml-2'><img src='/icons/right-arrow.svg' /></span></button>
                 </motion.div>
                 <motion.div variants={cardVariants} className=" w-full">
-                    <img src="https://via.placeholder.com/300" alt="Team Image" className="rounded-lg w-full h-96" />
+                    <img src="https://clictadigital.com/wp-content/uploads/2023/07/What-is-Growth-Marketing.jpg" alt="Team Image" className="rounded-lg w-full h-96" />
 
                 </motion.div>
             </motion.div>
@@ -131,7 +131,7 @@ export default function Analytics() {
                 animate={inView3 ? "visible" : "hidden"}
                 variants={containerVariants} className=" analytics-section-3 w-full flex space-x-10 py-10 justify-center items-center">
                 <motion.div variants={cardVariants} className=" w-full">
-                    <img src="https://via.placeholder.com/300" alt="Team Image" className="rounded-lg w-full h-96" />
+                    <img src="https://www.cssinfotech.in/assets/img/1566550914476.jpg" alt="Team Image" className="rounded-lg w-full h-96" />
 
                 </motion.div>
                 <motion.div variants={cardVariants} className="w-full rounded-lg flex flex-col justify-start items-start h-full">
