@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ID}`}></script>
         <script
           dangerouslySetInnerHTML={
@@ -42,7 +42,7 @@ export default function RootLayout({
         />
 
 
-      </Head>
+      </head>
       <body className={`${inter.className} bg-secondary-300`}>
         <Toaster position="bottom-left" />
         <Navbar />
