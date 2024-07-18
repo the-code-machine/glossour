@@ -63,7 +63,7 @@ const BookMeetingForm: React.FC<BookMeetingFormProps> = ({ title }) => {
             </div>
             <form className='quote-form' onSubmit={handleSubmit(onSubmit, onError)}>
                 <h1>{title}</h1>
-                <p>IT&apos;S FAST, EASY & FREE</p>
+                <p>IT'S FAST, EASY & FREE</p>
                 <Controller
                     name='name'
                     defaultValue={''}
