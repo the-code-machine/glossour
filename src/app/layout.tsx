@@ -15,12 +15,25 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.className}   bg-secondary-300 `}>
+      <head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ID}`}></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ID});
+          `}
+        </script>
+      </head>
+      <body className={`${inter.className} bg-secondary-300`}>
         <Toaster position="bottom-left" />
         <Navbar />
         {children}
