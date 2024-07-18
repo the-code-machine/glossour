@@ -29,7 +29,8 @@ export default function RootLayout({
               dataLayer.push(arguments);
             }
             gtag('js', new Date());
-            gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ID});
+            gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ID},{
+            page_path: window.location.pathname,});
           `}
         </script>
       </head>
