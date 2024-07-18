@@ -14,7 +14,7 @@ export default function Footer() {
         },
         {
             title: 'About Us',
-            link: '/about-us'
+            link: '/about/about-us'
         },
         {
             title: 'Services',
@@ -22,7 +22,7 @@ export default function Footer() {
         },
         {
             title: 'Contact Us',
-            link: '/contact'
+            link: '/about/contact'
         }
     ]
     const socials = [
@@ -88,7 +88,7 @@ export default function Footer() {
                         Boost sales and enhance customer experience with our digital marketing solutions.
                     </p>
                 </div>
-                <Link href={'/contact'}> <button className="shadow-md text-sm text-tertiary-200 font-bold bg-white px-3 py-2 rounded">
+                <Link href={'/about/contact'}> <button className="shadow-md text-sm text-tertiary-200 font-bold bg-white px-3 py-2 rounded">
                     Get Connected
                 </button></Link>
             </div>
