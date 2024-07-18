@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import WhatsApp from "@/components/utils/WhatsApp";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,20 +21,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ID}`}></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
+        <script
+          dangerouslySetInnerHTML={
+            {
+              __html: `
+              window.dataLayer = window.dataLayer || [];
             function gtag() {
               dataLayer.push(arguments);
             }
             gtag('js', new Date());
             gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ID},{
             page_path: window.location.pathname,});
-          `}
-        </script>
-      </head>
+            `,
+            }
+          }
+
+
+        />
+
+
+      </Head>
       <body className={`${inter.className} bg-secondary-300`}>
         <Toaster position="bottom-left" />
         <Navbar />
