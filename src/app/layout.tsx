@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import WhatsApp from "@/components/utils/WhatsApp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Toaster position="bottom-left" />
         <Navbar />
         {children}
+        <WhatsApp />
         <Footer />
       </body>
     </html>
