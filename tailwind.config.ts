@@ -19,6 +19,7 @@ const config: Config = {
         secondary: {
           200: "#050416",
           300: "#030309",
+          100: "#FACC15",
         },
         tertiary: {
           200: "#251DB5",

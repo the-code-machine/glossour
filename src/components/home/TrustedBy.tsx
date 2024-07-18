@@ -18,7 +18,7 @@ export default function TrustedBy() {
         })
     }
     return (
-        <div className=' w-full flex justify-center items-center px-32 space-x-16 py-20'>
+        <div className=' w-full  grid md:grid-cols-7 grid-cols-2 justify-center items-center    md:py-20 gap-6 py-10'>
             {
                 [1, 2, 3, 4, 5, 3, 2].map((item, index) => (
                     <motion.div variants={variants} initial="intial" whileInView="animate" custom={index} key={index} className='flex justify-center items-center   '>

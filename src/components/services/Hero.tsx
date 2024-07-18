@@ -1,33 +1,22 @@
-"use client";
-import React from "react";
-import { SparklesCore } from "../utils/sparkles";
+'use client'
+import React from 'react';
+import ServiceQuoteForm from '../utils/Form/ServiceQuoteForm';
+import { HeroSection } from '../types/Services';
 
-export function SparklesPreview() {
+
+
+const Hero: React.FC<HeroSection> = ({ heading, paragraph, service }) => {
     return (
-        <div className="h-[40rem] w-full  bg-secondary-200 flex flex-col items-center justify-center overflow-hidden rounded-md">
-            <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
-                SEO
-            </h1>
-            <div className="w-[65rem] h-40 relative">
-                {/* Gradients */}
-                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[3px] w-3/4 blur-sm" />
-                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-[#251DB5] to-transparent h-[8px] w-1/4 blur-sm" />
-                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-[#251DB5] to-transparent h-px w-1/4" />
-
-                {/* Core component */}
-                <SparklesCore
-                    background="transparent"
-                    minSize={0.4}
-                    maxSize={1}
-                    particleDensity={1200}
-                    className="w-full h-full"
-                    particleColor="#FFFFFF"
-                />
-
-
-                <div className="absolute inset-0 w-full h-full  bg-secondary-200 [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+        <div className=' flex w-full  lg:flex-row flex-col  xl:px-40 lg:px-10 md:px-8 px-4 py-28  xl:pt-32 xl:pb-16 lg:py-28 md:py-32 lg:space-y-0  space-y-8 justify-center items-center'>
+            <div className="flex xl:w-4/6 lg:w-full w-full flex-col space-y-3 ">
+                <h1 className=' xl:text-7xl lg:text-6xl md:text-4xl  text-3xl font-extrabold  text-tertiary-200'> #1 Ranked </h1>
+                <p className='  xl:text-7xl lg:text-6xl md:text-4xl  text-3xl font-medium text-white'>{heading}</p>
+                <p className=' text-xl md:font-medium   font-extralight text-white  lg:w-3/4 w-full'>{paragraph}</p>
             </div>
-        </div>
+            <div className="flex xl:w-2/6  lg:w-full w-full">
+                <ServiceQuoteForm title={service} />
+            </div>
+        </div >
     );
-}
+};
+export default Hero;

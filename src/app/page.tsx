@@ -8,14 +8,16 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>
+    <div >
       <HeroSection />
-      <TrustedBy />
-      <Analytics />
-      <CustomerReview />
-      <Space h={16} />
-      <ServicesBrief />
-      <Space h={16} />
+      <div className='xl:px-64 lg:px-20 md:px-8 px-4'>
+
+        <TrustedBy />
+        <Analytics />
+        <CustomerReview />
+        <Space h={16} />
+        <ServicesBrief />
+        <Space h={16} /></div>
     </div>
   )
 }

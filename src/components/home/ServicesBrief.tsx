@@ -6,81 +6,74 @@ import ServicesCard from '../utils/ServicesCard';
 interface ServicesBriefProps { }
 
 const ServicesBrief: React.FC<ServicesBriefProps> = () => {
-    const services: string[] = ['Web Development', 'E-Commerce Marketing', 'SEO', 'Social Media', 'PPC', 'Press Release', 'Graphic Designing', 'Political Campaign'];
+    const services: string[] = ['Web Development', 'Influencer Marketing', 'SEO', 'Social Media', 'PPC/Ads', 'Press Release', 'Reputation Mangement'];
     const ServicesInfo: any[] = [
         {
             subtitle: 'Web Development',
-            title: 'Web Development',
-            description: 'We build websites that are fast, secure, and easy to manage. We develop websites that are responsive, user-friendly, and SEO optimized.',
-            image: 'https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg',
+            title: 'Cutting-Edge Web Development',
+            description: 'We build websites that are fast, secure, and easy to manage. Our development process ensures your site is responsive, user-friendly, and SEO optimized for maximum reach and performance.',
+            image: '/services-brief/web.png',
             features: ['Fast', 'Secure', 'User-Friendly'],
-            buttonText: 'LEARN MORE',
+            buttonText: 'EXPLORE WEB DEVELOPMENT',
             buttonLink: '/services/web-development'
         },
         {
-            subtitle: 'E-Commerce Marketing',
-            title: 'E-Commerce Marketing',
-            description: 'We help businesses increase their online sales and revenue through our E-Commerce Marketing services. We provide services like SEO, PPC, and Social Media Marketing.',
-            image: 'https://static.vecteezy.com/system/resources/previews/005/732/516/non_2x/e-commerce-online-shopping-digital-marketing-internet-business-technology-concept-on-virtual-screen-free-photo.jpg',
-            features: ['SEO', 'PPC', 'Social Media Marketing',],
-            buttonText: 'LEARN MORE',
-            buttonLink: '/services/e-commerce-marketing'
+            subtitle: 'Influencer Marketing',
+            title: 'Impactful Influencer Marketing',
+            description: 'Amplify your brand’s reach and engagement through our strategic Influencer Marketing services. We connect you with the right influencers to create authentic and compelling content that resonates with your target audience.',
+            image: '/services-brief/influencer.png',
+            features: ['Influencer Selection', 'Content Creation', 'Campaign Management'],
+            buttonText: 'DISCOVER INFLUENCER MARKETING',
+            buttonLink: '/services/influencer-marketing'
         },
+
         {
-            subtitle: 'SEO',
-            title: 'SEO',
-            description: 'We help businesses increase their online visibility and organic traffic through our SEO services. We provide services like On-Page SEO, Off-Page SEO, and Technical SEO.',
-            image: 'https://media.istockphoto.com/id/1385957068/photo/seo-search-engine-optimization-marketing-ranking-traffic-website-internet-business-technology.jpg?s=612x612&w=0&k=20&c=1IDmzJNcAl_ttoIIYE4AbXe98MKL02EiFs5b9hJnqrc=',
-            features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO',],
-            buttonText: 'LEARN MORE',
+            subtitle: 'SEO Services',
+            title: 'Expert SEO Optimization',
+            description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
+            image: '/services-brief/seo.png',
+            features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
+            buttonText: 'LEARN ABOUT SEO',
             buttonLink: '/services/seo'
         },
         {
-            subtitle: 'Social Media',
-            title: 'Social Media',
-            description: 'We help businesses increase their online presence and engagement through our Social Media Marketing services. We provide services like Facebook Marketing, Instagram Marketing, and LinkedIn Marketing.',
-            image: 'https://img.lovepik.com/photo/48006/8205.jpg_wh860.jpg',
-            features: ['Facebook Marketing', 'Instagram Marketing', 'LinkedIn Marketing',],
-            buttonText: 'LEARN MORE',
+            subtitle: 'Social Media Marketing',
+            title: 'Engaging Social Media Campaigns',
+            description: 'Increase your online presence and engagement with our Social Media Marketing services. We specialize in Facebook, Instagram, and LinkedIn Marketing to help you connect with your audience.',
+            image: '/services-brief/social.png',
+            features: ['Facebook Marketing', 'Instagram Marketing', 'LinkedIn Marketing'],
+            buttonText: 'EXPLORE SOCIAL MEDIA MARKETING',
             buttonLink: '/services/social-media'
         },
         {
-            subtitle: 'PPC',
-            title: 'PPC',
-            description: 'We help businesses increase their online sales and revenue through our PPC services. We provide services like Google Ads, Bing Ads, and Facebook Ads.',
-            image: 'https://img.freepik.com/premium-vector/cartoon-illustration-blue-backdrop-abstract-ppc-marketing-advertising-design_123447-2962.jpg',
-            features: ['Google Ads', 'Bing Ads', 'Facebook Ads',],
-            buttonText: 'LEARN MORE',
+            subtitle: 'PPC Advertising',
+            title: 'Effective PPC Campaigns',
+            description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
+            image: '/services-brief/ppc.png',
+            features: ['Google Ads', 'Bing Ads', 'Facebook Ads'],
+            buttonText: 'LEARN ABOUT PPC',
             buttonLink: '/services/ppc'
         },
         {
-            subtitle: 'Press Release',
-            title: 'Press Release',
-            description: 'We help businesses increase their online visibility and credibility through our Press Release services. We provide services like Press Release Writing and Press Release Distribution.',
-            image: 'https://media.istockphoto.com/id/469182248/photo/newspaper-with-the-headline-press-release.webp?b=1&s=170667a&w=0&k=20&c=wnDdn6NQSxUT15cF8ZIyGFYOboK-mPzAUpGIokRLqCk=',
+            subtitle: 'Press Release Services',
+            title: 'Impactful Press Releases',
+            description: 'Enhance your online visibility and credibility with our Press Release services. We provide Press Release Writing and Distribution to ensure your news reaches the right audience.',
+            image: '/services-brief/press.png',
             features: ['Press Release Writing', 'Press Release Distribution', 'Increase Visibility'],
-            buttonText: 'LEARN MORE',
+            buttonText: 'DISCOVER PRESS RELEASE SERVICES',
             buttonLink: '/services/press-release'
         },
         {
-            subtitle: 'Graphic Designing',
-            title: 'Graphic Designing',
-            description: 'We help businesses increase their online presence and engagement through our Graphic Designing services. We provide services like Logo Design, Banner Design, and Social Media Design.',
-            image: 'https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/06/graphic-designer-desk.jpeg-1.jpg',
-            features: ['Logo Design', 'Banner Design', 'Social Media Design',],
-            buttonText: 'LEARN MORE',
-            buttonLink: '/services/graphic-designing'
-        },
-        {
-            subtitle: 'Political Campaign',
-            title: 'Political Campaign',
-            description: 'We help politicians increase their online visibility and engagement through our Political Campaign services. We provide services like Social Media Marketing, PPC, and Press Release.',
-            image: 'https://www.research-live.com/img/online-political-ads-laptop_crop.jpg',
-            features: ['Social Media Marketing', 'PPC', 'Press Release',],
-            buttonText: 'LEARN MORE',
-            buttonLink: '/services/political-campaign'
-        },
-    ]
+            subtitle: 'Reputation Management',
+            title: 'Comprehensive Reputation Management',
+            description: 'Protect and enhance your brand’s image with our Reputation Management services. We offer tailored strategies to improve your online visibility and credibility through various channels.',
+            image: '/services-brief/reputation.png',
+            features: ['Brand Monitoring', 'Crisis Management', 'Review Management'],
+            buttonText: 'LEARN ABOUT REPUTATION MANAGEMENT',
+            buttonLink: '/services/reputation-management'
+        }
+    ];
+
     const [active, setActive] = useState<number>(0);
     const [dimensions, setDimensions] = useState<{ width: number; left: number }>({ width: 0, left: 0 });
 
@@ -94,10 +87,10 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
     }, [active]);
 
     return (
-        <div className='w-full xl:px-48 md:px-8 lg:px-20 px-4'>
-            <div className='relative w-full p-2 flex border border-paragraph-200 rounded-md'>
+        <div className='w-full overflow-x-hidden'>
+            <div className='relative w-full p-2 flex border overflow-x-scroll scroll-bar border-paragraph-200 rounded-md'>
                 <motion.div
-                    className="absolute top-2 h-10 bg-tertiary-200 rounded-md"
+                    className="absolute top-2 lg:h-9 h-6 bg-tertiary-200 rounded-md"
                     initial={false}
                     animate={{ width: dimensions.width, left: dimensions.left }}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
@@ -109,7 +102,7 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
                         ref={(el: HTMLButtonElement | null) => {
                             buttonsRef.current[index] = el;
                         }}
-                        className={`relative z-10 flex justify-center rounded-md transition-all items-center px-4 py-2 text-white ${active === index ? 'bg-transparent' : ''}`}
+                        className={`relative z-10 flex justify-center rounded-md transition-all items-center text-nowrap lg:px-2.5 xl:px-3.5 py-1.5 lg:text-sm xl:text-[16px] text-xs px-2 text-white ${active === index ? 'bg-transparent' : ''}`}
                     >
                         {service}
                     </button>

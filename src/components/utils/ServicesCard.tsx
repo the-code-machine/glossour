@@ -50,7 +50,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
         <div>
             <motion.div ref={ref3} initial="hidden"
                 animate={inView3 ? "visible" : "hidden"}
-                variants={containerVariants} className=" w-full flex space-x-10 py-10 justify-center items-center">
+                variants={containerVariants} className=" w-full flex md:space-y-0 space-y-5 flex-col md:flex-row md:space-x-10 py-10 justify-center items-center">
 
                 <motion.div variants={cardVariants} className="w-full rounded-lg flex flex-col justify-start items-start h-full">
 
@@ -66,7 +66,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
                     <Link href={buttonLink}>   <button className=' bg-button-gradient mt-8 rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5  justify-center font-normal items-center text-sm '><span>{buttonText}</span><span className=' ml-2'><img src='/icons/right-arrow.svg' /></span></button></Link>
                 </motion.div>
                 <motion.div variants={cardVariants} className=" w-full">
-                    <img src={image} alt="Team Image" className="rounded-lg w-full h-96" />
+                    <img src={image} alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-72 h-56" />
 
                 </motion.div>
             </motion.div>

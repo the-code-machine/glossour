@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
     FiArrowRight,
     FiBarChart2,
@@ -8,13 +8,21 @@ import {
     FiPieChart,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { FaArrowAltCircleRight, FaArrowRight } from "react-icons/fa";
 interface TabProps {
     children: React.ReactNode;
     tab: number;
     handleSetSelected: (val: number | null) => void;
     selected: number | null;
 }
-
+interface ServiceInfo {
+    subtitle: string;
+    image: string;
+    buttonText: string;
+    buttonLink: string;
+}
 interface ContentProps {
     selected: number | null;
     dir: 'l' | 'r' | null;
@@ -47,7 +55,7 @@ export const Tabs: React.FC = () => {
     return (
         <div
             onMouseLeave={() => handleSetSelected(null)}
-            className="relative flex h-fit gap-2"
+            className="relative flex md:flex-row flex-col h-fit gap-2"
         >
             {TABS.map((t) => {
                 return (
@@ -75,7 +83,7 @@ const Tab: React.FC<TabProps> = ({ children, tab, handleSetSelected, selected })
             id={`shift-tab-${tab}`}
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
-            className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-colors ${selected === tab
+            className={`flex items-center gap-1 rounded-full px-2 mt-1.5  text-sm transition-colors ${selected === tab
                 ? "  text-tertiary-200"
                 : "text-white"
                 }`}
@@ -105,7 +113,7 @@ const Content: React.FC<ContentProps> = ({ selected, dir }) => {
                 opacity: 0,
                 y: 8,
             }}
-            className="absolute left-0 top-[calc(100%_+_24px)] w-96 rounded-lg border  border-tertiary-200 bg-gradient-to-b  from-secondary-300  via-secondary-300 to-neutral-800 p-4"
+            className="absolute left-0 top-[calc(100%_+_24px)]  rounded-lg border  border-tertiary-200 bg-gradient-to-b  from-secondary-300  via-secondary-300 to-neutral-800 p-4"
         >
             <Bridge />
             <Nub selected={selected} />
@@ -171,132 +179,151 @@ const Nub: React.FC<NubProps> = ({ selected }) => {
     );
 };
 
-const Products: React.FC = () => {
+const About: React.FC = () => {
+    const about = [{
+        title: 'About us',
+        href: '/about/about-us'
+    },
+    {
+        title: 'Our Team',
+        href: '/about/team'
+    },
+    {
+        title: 'Book Free Meeting',
+        href: '/book-meeting'
+    },
+    {
+        title: 'Contact',
+        href: '/about/contact'
+    },
+    {
+        title: 'Testimonials',
+        href: '/about/testimonials'
+    },
+    {
+        title: 'FAQ',
+        href: '/about/faq'
+    },
+
+    ]
     return (
         <div>
-            <div className="flex gap-4">
+            <div className="flex ">
                 <div>
-                    <h3 className="mb-2 text-sm font-medium">Startup</h3>
-                    <a href="#" className="mb-1 block text-sm text-neutral-400">
-                        Bookkeeping
-                    </a>
-                    <a href="#" className="block text-sm text-neutral-400">
-                        Invoicing
-                    </a>
+                    <h3 className="mb-2 text-sm font-medium">About</h3>
+
+                    {about.map((item, index) => (
+                        <Link key={index + 1} href={item.href} className="mb-1 block text-sm text-neutral-400">
+                            {item.title}
+                        </Link>
+                    ))
+                    }
+
                 </div>
-                <div>
-                    <h3 className="mb-2 text-sm font-medium">Scaleup</h3>
-                    <a href="#" className="mb-1 block text-sm text-neutral-400">
-                        Live Coaching
-                    </a>
-                    <a href="#" className="mb-1 block text-sm text-neutral-400">
-                        Reviews
-                    </a>
-                    <a href="#" className="block text-sm text-neutral-400">
-                        Tax/VAT
-                    </a>
-                </div>
-                <div>
-                    <h3 className="mb-2 text-sm font-medium">Enterprise</h3>
-                    <a href="#" className="mb-1 block text-sm text-neutral-400">
-                        White glove
-                    </a>
-                    <a href="#" className="mb-1 block text-sm text-neutral-400">
-                        SOX Compliance
-                    </a>
-                    <a href="#" className="block text-sm text-neutral-400">
-                        Staffing
-                    </a>
-                    <a href="#" className="block text-sm text-neutral-400">
-                        More
-                    </a>
-                </div>
+
             </div>
 
-            <button className="ml-auto mt-4 flex items-center gap-1 text-sm  text-tertiary-200">
-                <span>View more</span>
-                <FiArrowRight />
-            </button>
+
         </div>
     );
 };
 
-const Pricing: React.FC = () => {
-    return (
-        <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
-            <a
-                href="#"
-                className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-            >
-                <FiHome className="mb-2 text-xl text-indigo-300" />
-                <span className="text-xs">Startup</span>
-            </a>
-            <a
-                href="#"
-                className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-            >
-                <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
-                <span className="text-xs">Scaleup</span>
-            </a>
-            <a
-                href="#"
-                className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-            >
-                <FiPieChart className="mb-2 text-xl text-indigo-300" />
-                <span className="text-xs">Enterprise</span>
-            </a>
-        </div>
-    );
-};
+const Services: React.FC = () => {
+    const [active, setActive] = useState<string>('Web Development');
+    const hoverRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
-const Blog: React.FC = () => {
+    const ServicesInfo: ServiceInfo[] = [
+        {
+            subtitle: 'Web Development',
+            image: 'https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg',
+            buttonText: 'REQUEST FREE QUOTE',
+            buttonLink: '/services/web-development',
+        },
+        {
+            subtitle: 'Influencer Marketing',
+            image: 'https://static.vecteezy.com/system/resources/previews/005/732/516/non_2x/e-commerce-online-shopping-digital-marketing-internet-business-technology-concept-on-virtual-screen-free-photo.jpg',
+            buttonText: 'REQUEST FREE QUOTE',
+            buttonLink: '/services/influencer-marketing',
+        },
+        {
+            subtitle: 'SEO',
+            image: 'https://media.istockphoto.com/id/1385957068/photo/seo-search-engine-optimization-marketing-ranking-traffic-website-internet-business-technology.jpg?s=612x612&w=0&k=20&c=1IDmzJNcAl_ttoIIYE4AbXe98MKL02EiFs5b9hJnqrc=',
+            buttonText: 'REQUEST FREE QUOTE',
+            buttonLink: '/services/seo',
+        },
+        {
+            subtitle: 'Social Media Marketing',
+            image: 'https://img.lovepik.com/photo/48006/8205.jpg_wh860.jpg',
+            buttonText: 'REQUEST FREE QUOTE',
+            buttonLink: '/services/social-media-marketing',
+        },
+        {
+            subtitle: 'PPC/Ads',
+            image: 'https://img.freepik.com/premium-vector/cartoon-illustration-blue-backdrop-abstract-ppc-marketing-advertising-design_123447-2962.jpg',
+            buttonText: 'REQUEST FREE QUOTE',
+            buttonLink: '/services/ppc',
+        },
+        {
+            subtitle: 'Reputation Mangement',
+            image: 'https://img.freepik.com/premium-vector/cartoon-illustration-blue-backdrop-abstract-ppc-marketing-advertising-design_123447-2962.jpg',
+            buttonText: 'REQUEST FREE QUOTE',
+            buttonLink: '/services/reputation-mangement',
+        },
+    ];
+
+    useEffect(() => {
+        const activeIndex = ServicesInfo.findIndex(item => item.subtitle === active);
+        if (hoverRefs.current[activeIndex]) {
+            hoverRefs.current[activeIndex]?.focus();
+        }
+    }, [active, ServicesInfo]);
+
     return (
         <div>
-            <div className="grid grid-cols-2 gap-2">
-                <a href="#">
+            <div className="flex w-[24.8rem] space-x-12">
+                <div className="w-48">
+                    {ServicesInfo.map((item, index) => (
+                        <Link
+                            key={index}
+                            href={item.buttonLink}
+                            ref={(el) => { hoverRefs.current[index] = el; }}
+                            className={`mb-1 text-sm flex justify-start items-center outline-none border-none hover:text-white ${active === item.subtitle ? 'text-white' : 'text-paragraph-200'
+                                }`}
+                            onMouseEnter={() => setActive(item.subtitle)}
+                        >
+                            {item.subtitle}
+                            <span className={`${active === item.subtitle ? 'flex' : 'hidden'} ml-2`}>
+                                <FaArrowRight size={10} color="#fff" />
+                            </span>
+                        </Link>
+                    ))}
+                </div>
+                <div className="w-48">
                     <img
-                        className="mb-2 h-14 w-full rounded object-cover"
-                        src="/imgs/blog/4.png"
-                        alt="Placeholder image"
+                        src={ServicesInfo.find(item => item.subtitle === active)?.image}
+                        alt={active}
+                        className="w-full h-24 rounded-xl object-cover"
                     />
-                    <h4 className="mb-0.5 text-sm font-medium">Lorem ipsum dolor</h4>
-                    <p className="text-xs text-neutral-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-                        quidem eos.
-                    </p>
-                </a>
-                <a href="#">
-                    <img
-                        className="mb-2 h-14 w-full rounded object-cover"
-                        src="/imgs/blog/5.png"
-                        alt="Placeholder image"
-                    />
-                    <h4 className="mb-0.5 text-sm font-medium">Lorem ipsum dolor</h4>
-                    <p className="text-xs text-neutral-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-                        quidem eos.
-                    </p>
-                </a>
+                    <Link href={ServicesInfo.find(item => item.subtitle === active)?.buttonLink || ''}>
+                        <button className="bg-button-gradient mt-3 w-full rounded-md text-white flex border-tertiary-200 border-2 px-2 py-1 justify-center font-normal items-center text-sm">
+                            <span>{ServicesInfo.find(item => item.subtitle === active)?.buttonText}</span>
+                        </button>
+                    </Link>
+                </div>
             </div>
-            <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
-                <span>View more</span>
-                <FiArrowRight />
-            </button>
         </div>
     );
 };
+
 
 const TABS: TabType[] = [
     {
-        title: "About us",
-        Component: Products,
+        title: "About",
+        Component: About,
     },
     {
         title: "Services",
-        Component: Pricing,
+        Component: Services,
     },
-    {
-        title: "Contact",
-        Component: Blog,
-    },
+
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

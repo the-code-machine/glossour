@@ -108,7 +108,7 @@ export default function CustomerReview() {
     ]
 
     return (
-        <div className=' customer-review w-full px-48 py-16 flex flex-col  overflow-hidden'>
+        <div className=' customer-review w-full  py-16 flex flex-col  overflow-hidden'>
             <div className='flex w-full justify-between'>
                 <div className='text-4xl w-4/5 text-white font-semibold'>
                     <p className=' text-paragraph-200 text-xs my-1'>TESTIMONIAL</p>
