@@ -50,7 +50,7 @@ const ServiceQuoteForm: React.FC<ServiceQuoteFormProps> = ({ title }) => {
         <>
             <form className='quote-form' onSubmit={handleSubmit(onSubmit, onError)}>
                 <h1 className=' uppercase'>REQUEST A QUOTE FOR {title}</h1>
-                <p>IT`&apos;`S FAST, EASY & FREE</p>
+                <p>IT&apos;S FAST, EASY & FREE</p>
                 <Controller
                     name='name'
                     defaultValue={''}
