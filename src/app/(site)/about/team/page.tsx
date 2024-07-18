@@ -1,4 +1,5 @@
 
+import Link from 'next/link'
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 
@@ -34,19 +35,15 @@ export default function page() {
                         With expansion plans underway in Dubai and existing branches across India and the US, Yash envisions Glossour as a global powerhouse in digital marketing. His passion for delivering unparalleled client satisfaction and staying ahead with cutting-edge digital strategies defines Glossour continued success.
                     </p>
                     <div className=' flex space-x-4 justify-start items-center w-full  my-3'>
-
-                        <button className=' rounded-full bg-secondary-100 w-12 h-12 flex justify-center items-center'>
-                            <FaLinkedinIn color='#000' size={20} />
-                        </button>
-                        <button className=' rounded-full bg-secondary-100 w-12 h-12 flex justify-center items-center'>
+                        <Link href={'https://www.linkedin.com/in/yash-mishra-65b750211/?originalSubdomain=in'}>
+                            <button className=' rounded-full bg-secondary-100 w-12 h-12 flex justify-center items-center'>
+                                <FaLinkedinIn color='#000' size={20} />
+                            </button></Link>
+                        <Link href={'https://www.instagram.com/myselfyashmishra/'}> <button className=' rounded-full bg-secondary-100 w-12 h-12 flex justify-center items-center'>
                             <FaInstagram color='#000' size={20} />
-                        </button>
-                        <button className=' rounded-full bg-secondary-100 w-12 h-12 flex justify-center items-center'>
-                            <FaTwitter color='#000' size={20} />
-                        </button>
-                        <button className=' rounded-full bg-secondary-100 w-12 h-12 flex justify-center items-center'>
-                            <FaFacebookF color='#000' size={20} />
-                        </button>
+                        </button></Link>
+
+
                     </div>
                 </div>
             </div>
