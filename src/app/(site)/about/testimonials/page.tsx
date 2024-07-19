@@ -4,36 +4,10 @@ import { GlobeDemo } from '@/components/utils/Globe';
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-
+import { testimonials } from '@/content/testimonial';
 
 export default function Page() {
-    const testimonials = [
-        {
-            quote: "They moved on to find new ways to engage with our supporters and then identified influencers who would be important down the road.",
-            name: "Katy Simpson",
-            position: "Non-Profit Social Marketing Agency",
-            image: "//images.ctfassets.net/bete4dit0n31/7areDelinNUdWWLkzF8rlT/194637f3622f3e09c79541ebe07c527c/tesimonial.png"
-        },
-        {
-            quote: "They moved on to find new ways to engage with our supporters and then identified influencers who would be important down the road.",
-            name: "Katy Simpson",
-            position: "Non-Profit Social Marketing Agency",
-            image: "//images.ctfassets.net/bete4dit0n31/7areDelinNUdWWLkzF8rlT/194637f3622f3e09c79541ebe07c527c/tesimonial.png"
-        },
-        {
-            quote: "They moved on to find new ways to engage with our supporters and then identified influencers who would be important down the road.",
-            name: "Katy Simpson",
-            position: "Non-Profit Social Marketing Agency",
-            image: "//images.ctfassets.net/bete4dit0n31/7areDelinNUdWWLkzF8rlT/194637f3622f3e09c79541ebe07c527c/tesimonial.png"
-        },
-        {
-            quote: "They moved on to find new ways to engage with our supporters and then identified influencers who would be important down the road.",
-            name: "Katy Simpson",
-            position: "Non-Profit Social Marketing Agency",
-            image: "//images.ctfassets.net/bete4dit0n31/7areDelinNUdWWLkzF8rlT/194637f3622f3e09c79541ebe07c527c/tesimonial.png"
-        },
-        // Add more testimonials here
-    ];
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -52,7 +26,7 @@ export default function Page() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     };
 
-    const { quote, name, position, image } = testimonials[currentIndex];
+    const { description, name, company, img } = testimonials[currentIndex];
 
     return (
         <div>
@@ -70,15 +44,15 @@ export default function Page() {
                 <div className=' md:w-2/5 w-full  flex flex-col justify-center items-center '>
                     <div className="container   flex justify-center  ">
                         <div className=" w-full text-center">
-                            <p className="md:text-xl text-sm text-center text-paragraph-200 mb-6 f-f-DM">{quote}</p>
+                            <p className="md:text-xl text-sm text-center text-paragraph-200 mb-6 f-f-DM">{description}</p>
                             <div className="w-full flex flex-col justify-center items-center">
                                 <div key={currentIndex} className="flex justify-center gap-x-3">
                                     <div className="rounded-full w-16 h-16 border-2 border-tertiary-200">
-                                        <img alt="image" src={image} className="w-full rounded-full h-full object-cover" />
+                                        <img alt="image" src={img} className="w-full rounded-full h-full object-cover" />
                                     </div>
                                     <div>
-                                        <p className="md:text-sm md:leading-normal f-f-DM text-xs text-right text-white">{position}</p>
-                                        <p className="text-lg text-left font-bold leading-relaxed f-f-Mul mb-3 text-tertiary-200">{name}</p>
+                                        <p className="md:text-sm md:leading-normal f-f-DM text-xs text-left  text-white">{company}</p>
+                                        <p className="text-lg  font-bold leading-relaxed f-f-Mul mb-3 text-left text-tertiary-200">{name}</p>
                                     </div>
                                 </div>
 

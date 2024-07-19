@@ -4,7 +4,7 @@ import Card from '../utils/Card'
 import { FaArrowRight, FaArrowRightArrowLeft } from 'react-icons/fa6';
 import { FaArrowLeft } from 'react-icons/fa';
 
-
+import { testimonials } from '@/content/testimonial';
 import { motion } from 'framer-motion';
 
 export default function CustomerReview() {
@@ -62,50 +62,7 @@ export default function CustomerReview() {
     const handleMouseUp = () => {
         setIsDragging(false);
     };
-    const reviews: any[] = [
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-        {
-            name: 'Sarthak',
-            profession: 'Software Engineer',
-            content: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quas tempore pariatur reprehenderit vel placeat perspiciatis dicta similique beatae eius nulla, ipsam ut explicabo incidunt exercitationem at sint! Beatae, voluptatem.`,
-            img: '/logo/brand.jpg'
-        },
-    ]
+
 
     return (
         <div className=' customer-review w-full  py-16 flex flex-col  overflow-hidden'>
@@ -123,8 +80,8 @@ export default function CustomerReview() {
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseUp} // Also consider stopping drag on mouse leave
                 onMouseUp={handleMouseUp} ref={scrollRef} className=' flex  my-5 space-x-5 overflow-x-scroll scroll-bar'>
-                {reviews.map((item, index) => (
-                    <Card key={index + 1} name={item.name} profession={item.profession} img={item.img} content={item.content} />
+                {testimonials.map((item, index) => (
+                    <Card key={index + 1} name={item.name} profession={item.company} img={item.img} content={item.description} />
                 ))
 
                 }

@@ -15,12 +15,12 @@ export default function page() {
                 </p>
             </div>
             <div className='w-full space-y-8 md:space-y-0 md:space-x-8 flex md:flex-row flex-col p-4  bg-tertiary-200 rounded-md'>
-                <div className='w-full flex flex-col h-full'>
-                    <img src="/images/founder.png" alt="" className='w-full h-full  rounded-xl' />
+                <div className='md:w-1/4 w-full flex flex-col h-full'>
+                    <img src="/images/founder.png" alt="" className='w-full   h-[50vh]    rounded-xl' />
 
 
                 </div>
-                <div className='w-full flex flex-col h-full   text-white text-justify'>
+                <div className='md:w-3/4 w-full flex flex-col h-full   text-white text-justify'>
 
                     <div className=' text-3xl uppercase font-bold '>Mr. Yash Mishra</div>
                     <div className=' text-xl  '>Managing Director</div>

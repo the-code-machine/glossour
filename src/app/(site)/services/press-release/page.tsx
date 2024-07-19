@@ -2,6 +2,7 @@
 import Section8 from '@/components/services/Section8';
 import Carusal from '@/components/utils/Carausal';
 import RequestModal from '@/components/utils/Form/RequsetQuote';
+import FeaturedBy from '@/components/utils/PressRelease';
 import { motion, } from 'framer-motion';
 import { FC, useState } from 'react';
 import { useInView } from 'react-intersection-observer'
@@ -24,7 +25,7 @@ const PressRelease: FC = () => {
 
     return (
         <div className="">
-            <div className="container xl:px-40 lg:px-10 md:px-8 px-4 py-40">
+            <div className="container xl:px-40 lg:px-10 md:px-8 px-4 pt-40">
                 <div className="text-center pb-20">
                     <p className="text-sm font-bold tracking-[7px] leading-tight text-white uppercase">Press Release</p>
                     <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold text-tertiary-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR PRESS RELEASE SERVICES</h1>
@@ -83,6 +84,7 @@ const PressRelease: FC = () => {
                         </motion.div>
                     </motion.div>
                 </div>
+                <FeaturedBy />
             </div>
             <RequestModal isOpen={isOpen} setIsOpen={setIsOpen} title='Press Release' />
             <Section8 />

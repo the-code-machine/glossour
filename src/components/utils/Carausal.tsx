@@ -37,20 +37,28 @@ const IMAGES = [
         id: 1,
         imageSrc:
             "/services/press-release/2.png",
-        title: "ANI News",
-        description: "Glossour emerges Asia's best digital marketing agency",
-        link: 'https://www.aninews.in/news/business/business/glossour-emerges-asias-best-digital-marketing-agency20221013135043'
+        title: "Mid-Day",
+        description: "Glossour: Elevating the Music Industry with Premier Digital Marketing Services",
+        link: 'https://www.mid-day.com/brand-media/tech/article/glossour-elevating-the-music-industry-with-premier-digital-marketing-services-1504'
     },
     {
         id: 2,
         imageSrc:
             "/services/press-release/3.png",
+        title: "ANI News",
+        description: "Glossour emerges Asia's best digital marketing agency",
+        link: 'https://www.aninews.in/news/business/business/glossour-emerges-asias-best-digital-marketing-agency20221013135043'
+    },
+    {
+        id: 3,
+        imageSrc:
+            "/services/press-release/6.png",
         title: "Asia Business Outlook",
         description: "Indian Firm Glossour Emerges As Asia's Best Digital Marketing Agency",
         link: 'https://www.asiabusinessoutlook.com/news/indian-firm-glossour-emerges-as-asia-s-best-digital-marketing-agency-nwid-1319.html'
     },
     {
-        id: 3,
+        id: 4,
         imageSrc:
             "/services/press-release/4.png",
         title: "Republic News India",
@@ -58,13 +66,14 @@ const IMAGES = [
         link: 'https://republicnewsindia.com/best-digital-strategist-of-india-yash-mishra-expressed-his-vision-on-role-of-digital-platforms-in-influencing-voters/'
     },
     {
-        id: 4,
+        id: 5,
         imageSrc:
             "/services/press-release/5.png",
         title: "Lokmat Times",
         description: "Glossour emerges Asia's best digital marketing agency",
         link: 'https://www.lokmattimes.com/business/glossour-emerges-asias-best-digital-marketing-agency/'
     },
+
 ];
 
 const Carusal = () => {

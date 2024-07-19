@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { FaGoogle } from 'react-icons/fa';
+import { FaGoogle, FaStar } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 interface CardProps {
     content: string
@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ content, img, name, profession }) => {
 
             <div className='h-3/4 flex flex-col justify-center items-center w-full'>
                 <div className='rounded-xl   bg-button-gray w-16  h-16  backdrop-blur-sm backdrop-filter p-3 flex justify-center items-center'>
-                    <FaGoogle size={25} color='#ffffff' />
+                    <FaStar size={25} color='#ffffff' />
                 </div>
                 <p className=' text-paragraph-200 text-xs font-normal text-center my-3'>
                     {content}

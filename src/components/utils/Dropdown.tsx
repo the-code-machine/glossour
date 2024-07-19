@@ -11,11 +11,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { FaArrowAltCircleRight, FaArrowRight } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 interface TabProps {
     children: React.ReactNode;
     tab: number;
     handleSetSelected: (val: number | null) => void;
     selected: number | null;
+    title: string;
 }
 interface ServiceInfo {
     subtitle: string;
@@ -55,7 +57,7 @@ export const Tabs: React.FC = () => {
     return (
         <div
             onMouseLeave={() => handleSetSelected(null)}
-            className="relative flex md:flex-row flex-col h-fit gap-2"
+            className="relative flex md:flex-row flex-col h-fit  gap-2"
         >
             {TABS.map((t) => {
                 return (
@@ -64,6 +66,7 @@ export const Tabs: React.FC = () => {
                         selected={selected}
                         handleSetSelected={handleSetSelected}
                         tab={t.id}
+                        title={t.title}
                     >
                         {t.title}
                     </Tab>
@@ -77,13 +80,14 @@ export const Tabs: React.FC = () => {
     );
 };
 
-const Tab: React.FC<TabProps> = ({ children, tab, handleSetSelected, selected }) => {
+const Tab: React.FC<TabProps> = ({ children, tab, handleSetSelected, selected, title }) => {
+    const pathname = usePathname();
     return (
         <button
             id={`shift-tab-${tab}`}
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
-            className={`flex items-center gap-1 rounded-full px-2 mt-1.5  text-sm transition-colors ${selected === tab
+            className={`flex items-center gap-1 rounded-full px-2 mt-1.5  text-sm transition-colors ${selected === tab || pathname.includes(title.toLowerCase())
                 ? "  text-tertiary-200"
                 : "text-white"
                 }`}
@@ -232,43 +236,71 @@ const Services: React.FC = () => {
     const [active, setActive] = useState<string>('Web Development');
     const hoverRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
-    const ServicesInfo: ServiceInfo[] = [
+    const ServicesInfo: any[] = [
         {
             subtitle: 'Web Development',
-            image: 'https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg',
-            buttonText: 'REQUEST FREE QUOTE',
-            buttonLink: '/services/web-development',
+            title: 'Cutting-Edge Web Development',
+            description: 'We build websites that are fast, secure, and easy to manage. Our development process ensures your site is responsive, user-friendly, and SEO optimized for maximum reach and performance.',
+            image: '/services-brief/web.png',
+            features: ['Fast', 'Secure', 'User-Friendly'],
+            buttonText: 'EXPLORE WEB DEVELOPMENT',
+            buttonLink: '/services/web-development'
         },
         {
             subtitle: 'Influencer Marketing',
-            image: 'https://static.vecteezy.com/system/resources/previews/005/732/516/non_2x/e-commerce-online-shopping-digital-marketing-internet-business-technology-concept-on-virtual-screen-free-photo.jpg',
-            buttonText: 'REQUEST FREE QUOTE',
-            buttonLink: '/services/influencer-marketing',
+            title: 'Impactful Influencer Marketing',
+            description: 'Amplify your brand’s reach and engagement through our strategic Influencer Marketing services. We connect you with the right influencers to create authentic and compelling content that resonates with your target audience.',
+            image: '/services-brief/influencer.png',
+            features: ['Influencer Selection', 'Content Creation', 'Campaign Management'],
+            buttonText: 'DISCOVER INFLUENCER MARKETING',
+            buttonLink: '/services/influencer-marketing'
         },
+
         {
-            subtitle: 'SEO',
-            image: 'https://media.istockphoto.com/id/1385957068/photo/seo-search-engine-optimization-marketing-ranking-traffic-website-internet-business-technology.jpg?s=612x612&w=0&k=20&c=1IDmzJNcAl_ttoIIYE4AbXe98MKL02EiFs5b9hJnqrc=',
-            buttonText: 'REQUEST FREE QUOTE',
-            buttonLink: '/services/seo',
+            subtitle: 'SEO Services',
+            title: 'Expert SEO Optimization',
+            description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
+            image: '/services-brief/seo.png',
+            features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
+            buttonText: 'LEARN ABOUT SEO',
+            buttonLink: '/services/seo'
         },
         {
             subtitle: 'Social Media Marketing',
-            image: 'https://img.lovepik.com/photo/48006/8205.jpg_wh860.jpg',
-            buttonText: 'REQUEST FREE QUOTE',
-            buttonLink: '/services/social-media-marketing',
+            title: 'Engaging Social Media Campaigns',
+            description: 'Increase your online presence and engagement with our Social Media Marketing services. We specialize in Facebook, Instagram, and LinkedIn Marketing to help you connect with your audience.',
+            image: '/services-brief/social.png',
+            features: ['Facebook Marketing', 'Instagram Marketing', 'LinkedIn Marketing'],
+            buttonText: 'EXPLORE SOCIAL MEDIA MARKETING',
+            buttonLink: '/services/social-media'
         },
         {
-            subtitle: 'PPC/Ads',
-            image: 'https://img.freepik.com/premium-vector/cartoon-illustration-blue-backdrop-abstract-ppc-marketing-advertising-design_123447-2962.jpg',
-            buttonText: 'REQUEST FREE QUOTE',
-            buttonLink: '/services/ppc',
+            subtitle: 'PPC Advertising',
+            title: 'Effective PPC Campaigns',
+            description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
+            image: '/services-brief/ppc.png',
+            features: ['Google Ads', 'Bing Ads', 'Facebook Ads'],
+            buttonText: 'LEARN ABOUT PPC',
+            buttonLink: '/services/ppc'
         },
         {
-            subtitle: 'Reputation Mangement',
-            image: 'https://img.freepik.com/premium-vector/cartoon-illustration-blue-backdrop-abstract-ppc-marketing-advertising-design_123447-2962.jpg',
-            buttonText: 'REQUEST FREE QUOTE',
-            buttonLink: '/services/reputation-mangement',
+            subtitle: 'Press Release Services',
+            title: 'Impactful Press Releases',
+            description: 'Enhance your online visibility and credibility with our Press Release services. We provide Press Release Writing and Distribution to ensure your news reaches the right audience.',
+            image: '/services-brief/press.png',
+            features: ['Press Release Writing', 'Press Release Distribution', 'Increase Visibility'],
+            buttonText: 'DISCOVER PRESS RELEASE SERVICES',
+            buttonLink: '/services/press-release'
         },
+        {
+            subtitle: 'Reputation Management',
+            title: 'Comprehensive Reputation Management',
+            description: 'Protect and enhance your brand’s image with our Reputation Management services. We offer tailored strategies to improve your online visibility and credibility through various channels.',
+            image: '/services-brief/reputation.png',
+            features: ['Brand Monitoring', 'Crisis Management', 'Review Management'],
+            buttonText: 'LEARN ABOUT REPUTATION MANAGEMENT',
+            buttonLink: '/services/reputation-management'
+        }
     ];
 
     useEffect(() => {
@@ -280,8 +312,8 @@ const Services: React.FC = () => {
 
     return (
         <div>
-            <div className="flex w-[24.8rem] space-x-12">
-                <div className="w-48">
+            <div className="flex w-[25rem] space-x-12">
+                <div className="w-[13rem]">
                     {ServicesInfo.map((item, index) => (
                         <Link
                             key={index}
@@ -302,11 +334,11 @@ const Services: React.FC = () => {
                     <img
                         src={ServicesInfo.find(item => item.subtitle === active)?.image}
                         alt={active}
-                        className="w-full h-24 rounded-xl object-cover"
+                        className="w-full h-28 rounded-xl object-cover"
                     />
                     <Link href={ServicesInfo.find(item => item.subtitle === active)?.buttonLink || ''}>
                         <button className="bg-button-gradient mt-3 w-full rounded-md text-white flex border-tertiary-200 border-2 px-2 py-1 justify-center font-normal items-center text-sm">
-                            <span>{ServicesInfo.find(item => item.subtitle === active)?.buttonText}</span>
+                            <span>Request Quote</span>
                         </button>
                     </Link>
                 </div>

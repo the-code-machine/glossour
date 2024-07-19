@@ -32,7 +32,7 @@ const navigation: any[] = [
 ]
 const Navbar: React.FC<NavbarProps> = ({ }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const pathname = usePathname().split('/')[1]
+    const pathname = usePathname()
     const [active, setActive] = useState(false)
 
     const navbarRef = useRef<HTMLDivElement>(null);
@@ -50,8 +50,8 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
         };
     }, [navbarRef]);
     useEffect(() => {
-        console.log(pathname)
-        if (pathname === '') {
+        console.log(pathname.split('/')[1])
+        if (pathname.split('/')[1] === '') {
             gsap.registerPlugin(ScrollTrigger);
             gsap.fromTo('.navbar', { opacity: 1, display: 'flex' }, {
                 scrollTrigger: {
@@ -100,7 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                         <ul className=" text-white space-y-1 px-4">
                             <Link onClick={() => setActive(!active)} href={'/about/about-us'}> <li>About us</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/about/team'}> <li>Our team</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/book-meeting'}> <li>Book Free Meeting</li></Link>
+
                             <Link onClick={() => setActive(!active)} href={'/about/contact'}> <li>Contact</li></Link>
 
                             <Link onClick={() => setActive(!active)} href={'/about/testimonials'}> <li>Testimonial</li></Link>
@@ -139,13 +139,13 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                             <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}> <li>Influencer Marketing</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/ppc'}> <li>PPC/Ads</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/reputation-mangement'}> <li>Reputation Mangement</li></Link>
-
+                            <Link onClick={() => setActive(!active)} href={'/services/press-release'}> <li>Press Release</li></Link>
 
 
                         </ul>
                     </details>
 
-                    <Link href={'/services/press-release'}> <button onClick={() => setActive(!active)} className='  text-white text-xl  mt-2   flex justify-start'>Press Release</button></Link>
+                    <Link href={'/book-meeting'}> <button onClick={() => setActive(!active)} className='  text-white text-xl  mt-2   flex justify-start'>Book Meeting</button></Link>
                 </div>
                 <div>
                     <Link href={'https://glossour-yt.vercel.app/'} onClick={() => setActive(!active)}>
@@ -166,7 +166,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                     </Link>
                     <div className=' flex '>
                         <Tabs />
-                        <Link href={'/services/press-release'}>  <button className='  text-white text-sm px-2 mt-1.5'>Press Release</button></Link></div>
+                        <Link href={'/book-meeting'}>  <button className={` ${pathname.includes("book") ? ' text-tertiary-200' : 'text-white'}  text-sm px-2 mt-1.5`}>Book Meeting</button></Link></div>
                 </div>
                 <div className=' space-x-3 md:flex hidden justify-center items-center'>
                     <Link href={'https://glossour-yt.vercel.app/'}>
