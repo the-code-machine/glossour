@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
 import Section8 from '@/components/services/Section8';
+import Reveal from '@/components/utils/Reveal';
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
@@ -23,26 +24,26 @@ export default function Abous() {
         <div>
             <div className="container xl:px-40 lg:px-10 md:px-8 px-4 py-40  ">
                 <div ref={ref} className="text-center ">
-                    <p className="text-sm font-bold tracking-[7px] leading-tight text-white uppercase">ABOUT US</p>
-                    <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold text-tertiary-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR COMMITMENT</h1>
-                    <p className="md:text-2xl text-sm md:leading-[34px] text-paragraph-200 font-normal mb-8">
+                    <Reveal width='100%'>  <p className="text-sm font-bold tracking-[7px] leading-tight text-white uppercase">ABOUT US</p></Reveal>
+                    <Reveal width='100%'>  <h1 className="md:text-4xl lg:text-5xl text-3xl xl:text-6xl font-extrabold text-tertiary-200 leading-[48px] lg:leading-[72.8px] mb-2 mt-2">OUR COMMITMENT</h1></Reveal>
+                    <Reveal width='100%'> <p className="md:text-2xl text-sm md:leading-[34px] text-paragraph-200 font-normal mb-8">
                         We’re constantly searching for the brightest people from all over the world. People who are as trusted as they are talented and as passionate about their work as they are about their team. People who want to make marketing magic happen for legendary clients.
-                    </p>
+                    </p></Reveal>
                 </div>
-                <video src="/aboutus.mp4" autoPlay muted loop className='w-full  rounded-3xl  mt-10' />
-                <div ref={ref} className="grid my-20 grid-cols-1 lg:grid-cols-2 gap-10">
-                    <motion.div initial="hidden" animate={inView ? "visible" : "hidden"} variants={cardVariants}>
+                <Reveal width='100%'>  <video src="/aboutus.mp4" autoPlay muted loop className='w-full  rounded-3xl  mt-10' /></Reveal>
+                <div className="grid my-20 grid-cols-1 lg:grid-cols-2 gap-10">
+                    <Reveal width='100%'>  <motion.div >
                         <h2 className="text-4xl font-bold text-tertiary-200 mb-4">Our Mission</h2>
                         <p className="text-lg leading-relaxed text-paragraph-200 md:text-left text-justify mb-6">
                             At Glossour, our mission is to redefine digital marketing by providing innovative and effective solutions that drive measurable results. We aim to empower businesses to reach their full potential and achieve sustainable growth in an ever-evolving digital landscape.
                         </p>
-                    </motion.div>
-                    <motion.div initial="hidden" animate={inView ? "visible" : "hidden"} variants={cardVariants}>
+                    </motion.div></Reveal>
+                    <Reveal width='100%'>  <motion.div >
                         <h2 className="text-4xl font-bold text-tertiary-200 mb-4">Our Vision</h2>
                         <p className="text-lg leading-relaxed text-paragraph-200 mb-6 md:text-left text-justify ">
                             Our vision is to be the leading digital marketing agency known for our creativity, expertise, and client-centric approach. We aspire to build long-lasting partnerships with our clients, helping them navigate the complexities of the digital world with confidence and success.
                         </p>
-                    </motion.div>
+                    </motion.div></Reveal>
                 </div>
                 <div ref={ref} className="mt-20 ">
                     <h2 className="xl:text-5xl lg:text-4xl text-3xl font-bold text-tertiary-200 mb-10 text-center">Our Values</h2>

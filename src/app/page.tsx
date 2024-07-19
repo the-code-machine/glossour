@@ -12,11 +12,12 @@ export default function page() {
       <HeroSection />
       <div className='xl:px-64 lg:px-20 md:px-8 px-4'>
 
-        <TrustedBy />
-        <Analytics />
-        <CustomerReview />
         <Space h={16} />
         <ServicesBrief />
+        <Analytics />
+        <CustomerReview />
+
+
         <Space h={16} /></div>
     </div>
   )

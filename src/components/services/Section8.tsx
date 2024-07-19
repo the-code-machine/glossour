@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
+import Reveal from '../utils/Reveal';
 
 interface Section8Props {
 }
@@ -10,12 +11,12 @@ const Section8: React.FC<Section8Props> = ({ }) => {
         <div>
             <div className="container xl:px-[22px] lg:px-4 pt-14 py-10">
                 <div>
-                    <p className="text-sm text-center f-f-DM font-bold tracking-widest leading-[21px] mb-1 text-secondary-100 uppercase">Our Dedicated Sales Team</p>
-                    <h4 className="md:text-3xl text-xl font-black f-f-Lato md:leading-[41px] text-center text-white capitalize">We are Always Here for You</h4>
+                    <Reveal width='100%'><p className="text-sm text-center f-f-DM font-bold tracking-widest leading-[21px] mb-1 text-secondary-100 uppercase">Our Dedicated Sales Team</p></Reveal>
+                    <Reveal width='100%'> <h4 className="md:text-3xl text-xl font-black f-f-Lato md:leading-[41px] text-center text-white capitalize">We are Always Here for You</h4></Reveal>
                 </div>
             </div>
 
-            <div className="container mx-auto mb-12 overflow-hidden xl:px-32 lg:px-10 md:px-8">
+            <Reveal width='100%'>  <div className="container mx-auto mb-12 overflow-hidden xl:px-32 lg:px-10 md:px-8">
                 <div className="w-full bg-tertiary-200 flex flex-col lg:flex-row gap-x-12 items-stretch">
                     <div className="lg:w-2/4 w-full md:px-[22px] px-4 lg:pl-[73px]">
                         <div className="lg:py-[85px] pt-[34px] pb-[19px]">
@@ -41,7 +42,7 @@ const Section8: React.FC<Section8Props> = ({ }) => {
                         <img src="/images/meeting.png" alt="Book a Meeting" className="object-cover w-full h-full pt-10" />
                     </div>
                 </div>
-            </div>
+            </div></Reveal>
         </div>
 
 
