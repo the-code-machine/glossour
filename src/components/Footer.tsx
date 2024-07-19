@@ -81,14 +81,14 @@ export default function Footer() {
             {/* Top section */}
             <div className="w-full flex md:flex-row flex-col md:items-center md:space-y-0 space-y-5 xl:px-64 lg:px-20 md:px-8 px-4 bg-gradient-to-b py-16 from-tertiary-200 to-secondary-300 md:justify-between">
                 <div>
-                    <p className="md:text-4xl text-2xl text-white font-semibold">
+                    <p className="md:text-4xl text-2xl  text-secondary-100 font-bold">
                         Empower your business with Glossour
                     </p>
                     <p className="text-sm text-paragraph-200">
                         Boost sales and enhance customer experience with our digital marketing solutions.
                     </p>
                 </div>
-                <Link href={'/about/contact'}> <button className="shadow-md text-sm text-tertiary-200 font-bold bg-white px-3 py-2 rounded">
+                <Link href={'/about/contact'}> <button className="shadow-md text-sm  text-black font-bold bg-white px-3 py-2 rounded">
                     Get Connected
                 </button></Link>
             </div>
@@ -96,7 +96,7 @@ export default function Footer() {
             {/* Middle section */}
             <div className="flex w-full md:flex-row flex-col md:space-y-0 space-y-5 xl:px-64 lg:px-20 md:px-8 px-4 py-10">
                 <div className="md:w-3/5 w-full md:pr-64 flex flex-col justify-start space-y-5">
-                    <div className="text-3xl text-white font-bold">About Glossour</div>
+                    <div className="text-3xl  text-secondary-100 font-bold">About Glossour</div>
                     <p className="text-paragraph-200 text-xs">
                         We are a dynamic digital marketing agency specializing in SEO, Social Media Marketing, and Content Marketing strategies.
                     </p>
@@ -107,7 +107,7 @@ export default function Footer() {
                             className="rounded-3xl border-paragraph-200 text-white border py-2 px-3 bg-transparent placeholder:text-paragraph-200 placeholder:text-xs"
                             placeholder="Enter your email."
                         />
-                        <button onClick={onSubmit} className="bg-white text-tertiary-200 text-xs font-medium rounded-3xl md:py-2 py-3 text-nowrap px-3">
+                        <button onClick={onSubmit} className="bg-white  text-black text-xs font-medium rounded-3xl md:py-2 py-3 text-nowrap px-3">
                             {loading ? (
                                 <div className="loader"></div>
                             ) : (
@@ -121,7 +121,7 @@ export default function Footer() {
                 </div>
                 <div className="flex w-full md:items-end">
                     <div className="md:w-1/2 w-full flex flex-col space-y-2 justify-center md:items-end">
-                        <h1 className=" text-white font-medium">Explore</h1>
+                        <h1 className=" text-secondary-100 font-semibold">Explore</h1>
                         {explore.map((item, index) => (
                             <Link key={index} href={item.link}>
                                 <p key={index} className="text-sm text-paragraph-200 hover:text-white cursor-pointer font-light">
@@ -130,7 +130,7 @@ export default function Footer() {
                         ))}
                     </div>
                     <div className="md:w-1/2 w-full flex flex-col space-y-2 justify-center md:items-end">
-                        <h1 className=" text-white font-medium">Connect With Us</h1>
+                        <h1 className="   text-secondary-100 font-semibold">Connect With Us</h1>
                         {socials.map((item, index) => (
                             <Link key={index + 1} href={item.link}>
                                 <p key={index} className="text-sm text-paragraph-200 hover:text-white cursor-pointer font-light">

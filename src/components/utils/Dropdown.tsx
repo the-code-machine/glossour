@@ -214,10 +214,10 @@ const About: React.FC = () => {
         <div>
             <div className="flex ">
                 <div>
-                    <h3 className="mb-2 text-sm font-medium">About</h3>
+
 
                     {about.map((item, index) => (
-                        <Link key={index + 1} href={item.href} className="mb-1 block text-sm text-neutral-400">
+                        <Link key={index + 1} href={item.href} className="mb-1 block text-sm  text-white hover:text-secondary-100">
                             {item.title}
                         </Link>
                     ))
@@ -238,7 +238,7 @@ const Services: React.FC = () => {
 
     const ServicesInfo: any[] = [
         {
-            subtitle: 'Web Development',
+            subtitle: 'Website Development',
             title: 'Cutting-Edge Web Development',
             description: 'We build websites that are fast, secure, and easy to manage. Our development process ensures your site is responsive, user-friendly, and SEO optimized for maximum reach and performance.',
             image: '/services-brief/web.png',
@@ -257,8 +257,8 @@ const Services: React.FC = () => {
         },
 
         {
-            subtitle: 'SEO Services',
-            title: 'Expert SEO Optimization',
+            subtitle: 'Search Engine Optimization(SEO)',
+            title: 'Expert Search Engine Optimization',
             description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
             image: '/services-brief/seo.png',
             features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
@@ -276,7 +276,7 @@ const Services: React.FC = () => {
         },
         {
             subtitle: 'PPC Advertising',
-            title: 'Effective PPC Campaigns',
+            title: 'Effective Pay-per-click (PPC) Campaigns',
             description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
             image: '/services-brief/ppc.png',
             features: ['Google Ads', 'Bing Ads', 'Facebook Ads'],
@@ -312,25 +312,25 @@ const Services: React.FC = () => {
 
     return (
         <div>
-            <div className="flex w-[25rem] space-x-12">
-                <div className="w-[13rem]">
+            <div className="flex w-[26rem] space-x-12">
+                <div className="w-full">
                     {ServicesInfo.map((item, index) => (
                         <Link
                             key={index}
                             href={item.buttonLink}
                             ref={(el) => { hoverRefs.current[index] = el; }}
-                            className={`mb-1 text-sm flex justify-start items-center outline-none border-none hover:text-white ${active === item.subtitle ? 'text-white' : 'text-paragraph-200'
+                            className={`mb-1 text-sm flex justify-start items-center outline-none border-none hover:text-secondary-100 ${active === item.subtitle ? ' text-secondary-100' : 'text-paragraph-200'
                                 }`}
                             onMouseEnter={() => setActive(item.subtitle)}
                         >
                             {item.subtitle}
                             <span className={`${active === item.subtitle ? 'flex' : 'hidden'} ml-2`}>
-                                <FaArrowRight size={10} color="#fff" />
+                                <FaArrowRight size={10} color="#FACC15" />
                             </span>
                         </Link>
                     ))}
                 </div>
-                <div className="w-48">
+                <div className="w-[13rem]">
                     <img
                         src={ServicesInfo.find(item => item.subtitle === active)?.image}
                         alt={active}

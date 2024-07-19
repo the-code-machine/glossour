@@ -16,8 +16,8 @@ const Card: React.FC<CardProps> = ({ content, img, name, profession }) => {
             transition={{ duration: 0.3, ease: "easeInOut" }} className=' flex-shrink-0 rounded-md bg-card-gradient p-6 h-96 w-80  flex flex-col space-y-3 justify-center items-center'>
 
             <div className='h-3/4 flex flex-col justify-center items-center w-full'>
-                <div className='rounded-xl   bg-button-gray w-16  h-16  backdrop-blur-sm backdrop-filter p-3 flex justify-center items-center'>
-                    <FaStar size={25} color='#FACC15' />
+                <div className='  space-x-3 flex justify-center items-center my-3'>
+                    <FaStar size={25} color='#FACC15' />    <FaStar size={25} color='#FACC15' />    <FaStar size={25} color='#FACC15' />    <FaStar size={25} color='#FACC15' />    <FaStar size={25} color='#FACC15' />
                 </div>
                 <p className=' text-paragraph-200 text-xs font-normal text-center my-3'>
                     {content}

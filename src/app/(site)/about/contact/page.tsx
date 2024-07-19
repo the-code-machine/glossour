@@ -26,14 +26,14 @@ const ContactPage: React.FC = () => {
                                 <span><FaMobile color='#fff' size={25} className="mr-2" /></span>
                                 <span className="font-semibold">PHONE NUMBER</span>
                             </div>
-                            <p className=' pl-8'>+91-881 882 882 3</p>
+                            <p className=' pl-8'>+91 881 882 882 3</p>
                         </div>
                         <div className=" flex  space-y-1 flex-col">
                             <div className='text-white flex  text-2xl font-semibold items-center'>
                                 <span><FaEnvelope color='#fff' size={25} className="mr-2" /></span>
                                 <span className="font-semibold">EMAIL US</span>
                             </div>
-                            <p className=' pl-8'>TeamGlossour@gmail.com</p>
+                            <p className=' pl-8'>Team@glossour.com</p>
                         </div>
 
                         <div className=" flex  space-y-1 flex-col">

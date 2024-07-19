@@ -21,17 +21,6 @@ const cardVariants = {
     }
 }
 
-const containerVariants = {
-    hidden: {
-        opacity: 1,
-    },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2
-        }
-    }
-}
 
 export default function Analytics() {
 

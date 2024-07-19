@@ -6,10 +6,10 @@ import ServicesCard from '../utils/ServicesCard';
 interface ServicesBriefProps { }
 
 const ServicesBrief: React.FC<ServicesBriefProps> = () => {
-    const services: string[] = ['Web Development', 'Influencer Marketing', 'SEO', 'Social Media', 'PPC/Ads', 'Press Release', 'Reputation Mangement'];
+    const services: string[] = ['Website Development', 'Influencer Marketing', 'Search Engine Optimization(SEO)', 'Social Media', 'Pay-per-click (PPC)', 'Press Release', 'Reputation Mangement'];
     const ServicesInfo: any[] = [
         {
-            subtitle: 'Web Development',
+            subtitle: 'Website Development',
             title: 'Cutting-Edge Web Development',
             description: 'We build websites that are fast, secure, and easy to manage. Our development process ensures your site is responsive, user-friendly, and SEO optimized for maximum reach and performance.',
             image: '/services-brief/web.png',
@@ -28,8 +28,8 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
         },
 
         {
-            subtitle: 'SEO Services',
-            title: 'Expert SEO Optimization',
+            subtitle: 'Search Engine Optimization(SEO)',
+            title: 'Expert Search Engine Optimization',
             description: 'Enhance your online visibility and drive organic traffic with our expert SEO services. We offer On-Page SEO, Off-Page SEO, and Technical SEO to ensure your site ranks higher on search engines.',
             image: '/services-brief/seo.png',
             features: ['On-Page SEO', 'Off-Page SEO', 'Technical SEO'],
@@ -47,7 +47,7 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
         },
         {
             subtitle: 'PPC Advertising',
-            title: 'Effective PPC Campaigns',
+            title: 'Effective Pay-per-click (PPC) Campaigns',
             description: 'Maximize your online sales and revenue with our PPC services. We offer Google Ads, Bing Ads, and Facebook Ads to ensure your ads reach the right audience and achieve your marketing goals.',
             image: '/services-brief/ppc.png',
             features: ['Google Ads', 'Bing Ads', 'Facebook Ads'],
@@ -90,7 +90,7 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
         <div className='w-full overflow-x-hidden'>
             <div className='relative w-full md:p-2 p-1 flex border overflow-x-scroll scroll-bar border-paragraph-200 rounded-md'>
                 <motion.div
-                    className="absolute md:top-2 top-1 lg:h-9 h-7 bg-tertiary-200 rounded-md"
+                    className="absolute md:top-2 top-1 lg:h-8 h-7 bg-tertiary-200 rounded-md"
                     initial={false}
                     animate={{ width: dimensions.width, left: dimensions.left }}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
