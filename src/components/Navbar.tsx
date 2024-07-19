@@ -148,7 +148,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                     <Link href={'/book-meeting'}> <button onClick={() => setActive(!active)} className='  text-white text-xl  mt-2   flex justify-start'>Book Meeting</button></Link>
                 </div>
                 <div>
-                    <Link href={'https://glossour-yt.vercel.app/'} onClick={() => setActive(!active)}>
+                    <Link href={process.env.NEXT_PUBLIC_YT_LINK || ''} onClick={() => setActive(!active)}>
                         <button className=' px-3 py-1.5 w-full rounded  border-[#807cd4] text-xl  mt-3  bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '>
                             <span className=' mr-3'><img src='/icons/right-arrow.svg' />
                             </span>Youtube Promotion</button>
@@ -166,10 +166,10 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                     </Link>
                     <div className=' flex '>
                         <Tabs />
-                        <Link href={'/book-meeting'}>  <button className={` ${pathname.includes("book") ? ' text-tertiary-200' : 'text-white'}  text-sm px-2 mt-1.5`}>Book Meeting</button></Link></div>
+                        <Link href={'/book-meeting'}>  <button className={` ${pathname.includes("book") ? ' text-secondary-100' : 'text-white'}  text-sm px-2 mt-1.5`}>Book Meeting</button></Link></div>
                 </div>
                 <div className=' space-x-3 md:flex hidden justify-center items-center'>
-                    <Link href={'https://glossour-yt.vercel.app/'}>
+                    <Link href={process.env.NEXT_PUBLIC_YT_LINK || ''}>
                         <button className=' px-3 py-1.5 rounded  border-[#807cd4] text-xs   bg-button-gradient border transition-all  justify-start items-center text-white font-normal flex  '><span className=' mr-3'><img src='/icons/right-arrow.svg' /></span>Youtube Promotion</button>
                     </Link>
 
