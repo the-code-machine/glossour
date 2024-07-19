@@ -138,7 +138,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
                             <Link onClick={() => setActive(!active)} href={'/services/social-media-marketing'}> <li>Social Media Marketing</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/influencer-marketing'}> <li>Influencer Marketing</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/ppc'}> <li>PPC/Ads</li></Link>
-                            <Link onClick={() => setActive(!active)} href={'/services/reputation-mangement'}> <li>Reputation Mangement</li></Link>
+                            <Link onClick={() => setActive(!active)} href={'/services/reputation-management'}> <li>Reputation Mangement</li></Link>
                             <Link onClick={() => setActive(!active)} href={'/services/press-release'}> <li>Press Release</li></Link>
 
 
