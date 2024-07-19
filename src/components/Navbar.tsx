@@ -162,7 +162,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
 
                 <div className=' md:flex hidden justify-start space-x-8  items-center'>
                     <Link href={'/'}>
-                        <button className='  transition-all  justify-center items-center flex  text-lg font-semibold text-white '><img src='/logo/brand.svg' className='w-32 h-full' /></button>
+                        <button className='  transition-all  justify-center items-center flex  text-lg font-semibold text-white '><img src='/logo/brand.svg' className='w-44 h-full' /></button>
                     </Link>
                     <div className=' flex '>
                         <Tabs />

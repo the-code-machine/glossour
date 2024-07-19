@@ -54,7 +54,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
 
                 <motion.div variants={cardVariants} className="w-full rounded-lg flex flex-col justify-start items-start h-full">
 
-                    <h2 className="text-4xl  font-bold mb-4 text-white">{title}</h2>
+                    <h2 className="text-4xl  font-bold mb-4  text-secondary-100">{title}</h2>
                     <p className="mb-4 text-paragraph-200 text-sm">{description}</p>
                     <ul className=' grid  grid-cols-1 gap-3 mb-5'>
                         {

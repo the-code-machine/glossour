@@ -69,7 +69,7 @@ export default function CustomerReview() {
             <div className='flex w-full justify-between'>
                 <div className='text-4xl w-4/5 text-white font-semibold'>
                     <p className=' text-paragraph-200 text-xs my-1'>TESTIMONIAL</p>
-                    <h2 className="text-4xl  font-bold mb-4 text-white">Customer Reviews</h2>
+                    <h2 className="text-4xl  font-bold mb-4  text-secondary-100">Customer Reviews</h2>
                 </div>
                 <div className='w-1/5 text-paragraph-200 text-xs font-normal flex  justify-end space-x-5  items-center'>
                     <motion.button transition={{ duration: 0.3, ease: "easeInOut" }} onClick={handleScrollLeft} whileHover={{ scale: 1.2 }} className=' rounded-full p-1 border-white border-2 '><FaArrowLeft color='#ffffff' size={10} /></motion.button>

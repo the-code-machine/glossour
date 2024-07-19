@@ -49,11 +49,11 @@ export default function Analytics() {
     return (
         <div className='w-full  py-16 flex flex-col justify-center items-center'>
             <div className='flex md:flex-row flex-col w-full md:justify-between md:space-y-0 space-y-3'>
-                <div className='xl:text-4xl lg:text-3xl md:text-2xl text-xl w-full text-white font-semibold'>
+                <div className='xl:text-4xl lg:text-3xl md:text-2xl text-xl w-full text-secondary-100 capitalize font-semibold'>
                     <Reveal width='100%'> <p className='w-full'>
                         Data-Driven Insights for Your Digital Marketing</p> </Reveal>
                 </div>
-                <div className=' text-paragraph-200 text-xs font-normal flex justify-center items-center'>
+                <div className='  text-white text-xs font-normal flex justify-center items-center'>
                     <Reveal width='100%'>  <p className='md:w-4/5 w-full '>
                         Gain valuable insights from your website, web app, or mobile app analytics to enhance your marketing strategies. Harness the power of data to make informed decisions and stay ahead in the competitive market.
 
@@ -113,8 +113,8 @@ export default function Analytics() {
 
             <motion.div className="w-full flex md:space-y-0 md:flex-row flex-col space-y-5 md:space-x-10 py-10 justify-center items-center">
                 <motion.div className="w-full rounded-lg flex flex-col justify-start items-start h-full">
-                    <Reveal width='100%'> <h2 className="text-4xl font-bold mb-4 text-white">Unleash Your Potential with YouTube Artist Promotion</h2></Reveal>
-                    <Reveal width='100%'><p className="mb-4 text-paragraph-200 text-sm">
+                    <Reveal width='100%'> <h2 className="text-4xl font-bold mb-4  capitalize text-secondary-100">Unleash Your Potential with YouTube Artist Promotion</h2></Reveal>
+                    <Reveal width='100%'><p className="mb-4  text-white text-sm">
                         Elevate your music career by harnessing the power of our YouTube Artist Promotion services. Our comprehensive approach not only boosts your channel visibility but also engages your audience effectively. With our expertise, artists can reach new heights and inspire change.
                     </p></Reveal>
                     <Link href={'https://glossour-yt.vercel.app/'}> <button className='bg-button-gradient uppercase rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5 justify-center font-normal items-center text-sm'>
@@ -135,8 +135,8 @@ export default function Analytics() {
                 </motion.div></Reveal>
                 <motion.div className="w-full rounded-lg flex flex-col justify-start items-start h-full">
                     <Reveal width='100%'> <p className='text-paragraph-200 text-xs my-1'>BOOK A FREE MEETING</p></Reveal>
-                    <Reveal width='100%'> <h2 className="xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold mb-4 text-white">Unlock Your Potential with a Free Consultation</h2></Reveal>
-                    <Reveal width='100%'>   <p className="mb-4 text-paragraph-200 text-sm">Discover how our tailored solutions can drive growth and inspire change for your business. Book a free meeting with our experts and explore the endless possibilities at your fingertips.</p></Reveal>
+                    <Reveal width='100%'> <h2 className="xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold mb-4   capitalize text-secondary-100">Unlock Your Potential with a Free Consultation</h2></Reveal>
+                    <Reveal width='100%'>   <p className="mb-4  text-white text-sm">Discover how our tailored solutions can drive growth and inspire change for your business. Book a free meeting with our experts and explore the endless possibilities at your fingertips.</p></Reveal>
                     <Reveal width='100%'><ul className='grid md:grid-cols-2 grid-cols-1 gap-3 mb-5 xl:text-sm text-xs'>
                         <li className='font-light flex justify-start items-center text-white'>
                             <span className='rounded-full p-1 border-tertiary-200 border-2 mr-3'><FaCheck color='#251DB5' size={10} /></span>

@@ -25,26 +25,35 @@ const config: Config = {
           200: "#251DB5",
         },
         paragraph: {
-          200: '#999B9C',
+          200: "#fff",
         },
         buttonGray: {
           200: "#0E0B49",
-          300:"#313441"
-        }
+          300: "#313441",
+        },
       },
       backgroundImage: {
-        'button-gradient': 'linear-gradient(to right bottom, #17126C, #251DB4)',
-        'card-gradient': 'linear-gradient(to  bottom,  #251DB5 40% , #000000 90%)',
-        'button-gray':'linear-gradient(to  bottom,  #110D52 40% , #050418 90%)'
+        "button-gradient": "linear-gradient(to right bottom, #17126C, #251DB4)",
+        "card-gradient":
+          "linear-gradient(to  bottom,  #251DB5 40% , #000000 90%)",
+        "button-gray":
+          "linear-gradient(to  bottom,  #110D52 40% , #050418 90%)",
       },
       animation: {
-        'gradient-border': 'gradient-border 5s infinite',
+        "gradient-border": "gradient-border 5s infinite",
       },
       keyframes: {
-        'gradient-border': {
-          '0%': { 'border-image-source': 'linear-gradient(45deg, #17126C, #251DB4)' },
-          '50%': { 'border-image-source': 'linear-gradient(45deg, #17126C, #251DB4, #17126C)' },
-          '100%': { 'border-image-source': 'linear-gradient(45deg, #251DB4, #17126C)' },
+        "gradient-border": {
+          "0%": {
+            "border-image-source": "linear-gradient(45deg, #17126C, #251DB4)",
+          },
+          "50%": {
+            "border-image-source":
+              "linear-gradient(45deg, #17126C, #251DB4, #17126C)",
+          },
+          "100%": {
+            "border-image-source": "linear-gradient(45deg, #251DB4, #17126C)",
+          },
         },
       },
     },
