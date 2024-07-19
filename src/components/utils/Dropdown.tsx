@@ -88,7 +88,7 @@ const Tab: React.FC<TabProps> = ({ children, tab, handleSetSelected, selected, t
             onMouseEnter={() => handleSetSelected(tab)}
             onClick={() => handleSetSelected(tab)}
             className={`flex items-center gap-1 rounded-full px-2 mt-1.5  text-sm transition-colors ${selected === tab || pathname.includes(title.toLowerCase())
-                ? "  text-tertiary-200"
+                ? "   text-secondary-100"
                 : "text-white"
                 }`}
         >

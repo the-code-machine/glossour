@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ content, img, name, profession }) => {
 
             <div className='h-3/4 flex flex-col justify-center items-center w-full'>
                 <div className='rounded-xl   bg-button-gray w-16  h-16  backdrop-blur-sm backdrop-filter p-3 flex justify-center items-center'>
-                    <FaStar size={25} color='#ffffff' />
+                    <FaStar size={25} color='#FACC15' />
                 </div>
                 <p className=' text-paragraph-200 text-xs font-normal text-center my-3'>
                     {content}
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ content, img, name, profession }) => {
             </div>
             <div className=' w-full h-1/4  flex justify-center items-center flex-col  '>
                 <img src={img} className=' rounded-full h-10 w-10' />
-                <h1 className=' text-white text-sm mt-1'>{name}</h1>
+                <h1 className='  text-secondary-100 text-sm mt-1'>{name}</h1>
                 <p className=' text-paragraph-200 text-xs'>{profession}</p>
             </div>
         </motion.div>
