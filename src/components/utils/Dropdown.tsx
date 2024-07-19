@@ -272,7 +272,7 @@ const Services: React.FC = () => {
             image: '/services-brief/social.png',
             features: ['Facebook Marketing', 'Instagram Marketing', 'LinkedIn Marketing'],
             buttonText: 'EXPLORE SOCIAL MEDIA MARKETING',
-            buttonLink: '/services/social-media'
+            buttonLink: '/services/social-media-marketing'
         },
         {
             subtitle: 'PPC Advertising',
