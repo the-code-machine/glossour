@@ -50,12 +50,12 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
         <div>
             <motion.div ref={ref3} initial="hidden"
                 animate={inView3 ? "visible" : "hidden"}
-                variants={containerVariants} className=" w-full flex md:space-y-0 space-y-5 flex-col md:flex-row md:space-x-10 py-10 justify-center items-center">
+                variants={containerVariants} className=" w-full flex md:space-y-0   flex-col-reverse md:flex-row md:space-x-10 py-5 justify-center items-center">
 
-                <motion.div variants={cardVariants} className="w-full rounded-lg flex flex-col justify-start items-start h-full">
+                <motion.div variants={cardVariants} className="w-full rounded-lg flex flex-col mt-5 md:mt-0 justify-start items-start h-full">
 
-                    <h2 className="text-4xl  font-bold mb-4  text-secondary-100">{title}</h2>
-                    <p className="mb-4 text-paragraph-200 text-sm">{description}</p>
+                    <h2 className="md:text-4xl text-3xl  font-bold mb-4   capitalize text-secondary-100">{title}</h2>
+                    <p className="mb-4 text-paragraph-200 text-sm text-justify md:text-left">{description}</p>
                     <ul className=' grid  grid-cols-1 gap-3 mb-5'>
                         {
                             features.map((feature, index) => (<li key={index + 1} className='font-light flex justify-start items-center text-white  text-sm '> <span className=' rounded-full p-0.5 border-white border-2 mr-3'><FaArrowRight color='#ffffff' size={8} /></span>{feature}</li>))
@@ -63,7 +63,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({ subtitle, title, descriptio
 
 
                     </ul>
-                    <Link href={buttonLink}>   <button className=' bg-button-gradient mt-8 rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5  justify-center font-normal items-center text-sm '><span>{buttonText}</span><span className=' ml-2'><img src='/icons/right-arrow.svg' /></span></button></Link>
+                    <Link href={buttonLink}>   <button className=' bg-button-gradient md:mt-8 mt-3 rounded-md text-white flex border-tertiary-200 border-2 px-3 py-1.5  justify-center font-normal uppercase items-center md:text-sm  text-xs'><span>{buttonText}</span><span className=' ml-2'><img src='/icons/right-arrow.svg' /></span></button></Link>
                 </motion.div>
                 <motion.div variants={cardVariants} className=" w-full">
                     <img src={image} alt="Team Image" className="rounded-lg w-full xl:h-96 lg:h-80 md:h-72 h-56" />

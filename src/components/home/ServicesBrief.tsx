@@ -88,9 +88,9 @@ const ServicesBrief: React.FC<ServicesBriefProps> = () => {
 
     return (
         <div className='w-full overflow-x-hidden'>
-            <div className='relative w-full p-2 flex border overflow-x-scroll scroll-bar border-paragraph-200 rounded-md'>
+            <div className='relative w-full md:p-2 p-1 flex border overflow-x-scroll scroll-bar border-paragraph-200 rounded-md'>
                 <motion.div
-                    className="absolute top-2 lg:h-9 h-6 bg-tertiary-200 rounded-md"
+                    className="absolute md:top-2 top-1 lg:h-9 h-7 bg-tertiary-200 rounded-md"
                     initial={false}
                     animate={{ width: dimensions.width, left: dimensions.left }}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
