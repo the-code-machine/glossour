@@ -12,12 +12,12 @@ const Section6: React.FC<Section> = ({ heading, subheading, paragraph, btn, img,
     };
 
     return (
-        <div className="w-full relative z-10 xl:px-32 lg:px-10 px-4 md:px-8 bg-tertiary-200">
+        <div className="w-full  xl:px-32 lg:px-10 px-4 md:px-8 bg-tertiary-200">
             <div className="container md:px-[16px] lg:px-0 mx-auto">
                 <div className="w-full pb-9 lg:pt-12 pt-[62px] flex justify-between flex-col-reverse lg:flex-row items-center gap-y-[20px] lg:gap-y-[51px] gap-x-48">
                     <div className="lg:w-2/3 w-full">
                         <div className="lg:flex flex-col ">
-                            <h2 className=" text-secondary-100 text-[30px] md:leading-[44px] lg:text-5xl font-extrabold f-f-Lato lg:leading-[52px] md:mb-6">
+                            <h2 className=" text-secondary-100  text-3xl  md:leading-[44px] lg:text-5xl font-extrabold f-f-Lato lg:leading-[52px] md:mb-6">
                                 {heading}
                             </h2>
                             <p className=" text-white md:text-2xl text-xl font-bold md:leading-9 f-f-Lato  mb-3 md:mb-6">
@@ -25,7 +25,7 @@ const Section6: React.FC<Section> = ({ heading, subheading, paragraph, btn, img,
                             </p>
                         </div>
                         <div className="border-l-2  text-secondary-100 pl-4 mb-11">
-                            <p className=" text-white md:text-xl md:leading-9 text-sm font-normal f-f-Lato">
+                            <p className=" text-white md:text-xl md:leading-9 text-sm font-normal ">
                                 {isExpanded ? (
                                     <span>
                                         {paragraph.slice(0, 1000)}{' '}

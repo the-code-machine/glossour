@@ -7,7 +7,7 @@ import { WhatMakeDiff } from '../types/Services';
 const WhatMakeDiffCompo: React.FC<WhatMakeDiff> = ({ heading, content }) => {
     return (
         <div className='w-full xl:px-32 lg:px-10 md:px-10 px-4 bg-tertiary-200 py-10'>
-            <h1 className='text-white text-2xl font-semibold'>{heading}</h1>
+            <h1 className='text-white text-xl font-semibold'>{heading}</h1>
             <div className=' grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-5 mt-6'>
                 {content.map((item, index) => (
                     <motion.div

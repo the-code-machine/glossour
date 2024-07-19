@@ -30,7 +30,7 @@ export const AuroraHero = () => {
             style={{
                 backgroundImage,
             }}
-            className="container flex justify-center items-center     xl:px-64 lg:px-20 md:px-8  bg-gray-950 px-4  xl:py-48 lg:py-36 md:py-28 py-36   xl:space-x-15 text-gray-200"
+            className=" w-full  flex justify-center items-center     xl:px-64 lg:px-20 md:px-8  bg-gray-950 px-4  xl:py-48 lg:py-36 md:py-28 py-36   xl:space-x-15 text-gray-200"
         >
             <div className=' w-full flex flex-col justify-start '>
                 <Reveal width='100%'>  <h1 style={{ lineHeight: 1 }} className='xl:text-[4.5rem] lg:text-[3.5rem] md:text-[2.5rem] text-[2.5rem] font-bold  text-white'>MARKETING & PROMOTION</h1></Reveal>

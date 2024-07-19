@@ -11,7 +11,7 @@ const Section8: React.FC<Section8Props> = ({ }) => {
         <div>
             <div className="container xl:px-[22px] lg:px-4 pt-14 py-10">
                 <div>
-                    <Reveal width='100%'><p className="text-sm text-center f-f-DM font-bold tracking-widest leading-[21px] mb-1 text-secondary-100 uppercase">Our Dedicated Sales Team</p></Reveal>
+                    <Reveal width='100%'><p className="text-sm text-center  font-bold  leading-[21px] mb-1 text-secondary-100 uppercase">Our Dedicated Sales Team</p></Reveal>
                     <Reveal width='100%'> <h4 className="md:text-3xl text-xl font-black f-f-Lato md:leading-[41px] text-center text-white capitalize">We are Always Here for You</h4></Reveal>
                 </div>
             </div>
@@ -21,15 +21,15 @@ const Section8: React.FC<Section8Props> = ({ }) => {
                     <div className="lg:w-2/4 w-full md:px-[22px] px-4 lg:pl-[73px]">
                         <div className="lg:py-[85px] pt-[34px] pb-[19px]">
                             <div className="lg:mb-11 mb-8">
-                                <h3 className="lg:text-6xl text-[35px] font-black f-f-Lato leading-[49px] text-white">
-                                    Get Your Free Consultation <span className="lg:text-5xl text-[35px] font-black f-f-Lato leading-[49px] text-yellow-400 md:mb-2">Trust Us to Guide You
+                                <h3 className="lg:text-6xl  text-3xl font-black   capitalize text-white">
+                                    Get Your Free Consultation <span className="lg:text-5xl  text-3xl font-black  text-yellow-400 md:mb-2">Trust Us to Guide You
                                     </span>
                                 </h3>
 
 
 
 
-                                <p className="text-xl leading-loose f-f-DM font-normal text-white md:mt-6 mt-1">Connect with our experts and learn how our Digital Consumer Intelligence solutions can revolutionize your business.</p>
+                                <p className="md:text-xl   text-sm font-normal text-white md:mt-6 mt-1">Connect with our experts and learn how our Digital Consumer Intelligence solutions can revolutionize your business.</p>
                             </div>
                             <div className="cursor-pointer">
                                 <Link href={"/book-meeting"}>

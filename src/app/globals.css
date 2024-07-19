@@ -6,7 +6,7 @@
     display: none;
 }
 .quote-form{
-    @apply rounded-sm  bg-tertiary-200 lg:p-8 p-4 flex flex-col w-full h-full  font-medium text-white
+    @apply rounded-sm   bg-tertiary-200 lg:p-8 p-3 flex flex-col w-full h-full  font-medium text-white
 }
 .quote-form h1{
     @apply text-2xl text-white font-semibold
