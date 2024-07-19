@@ -387,7 +387,7 @@ Having a well-organized website is extremely important for SEO. We guarantee tha
       ],
     },
   },
-  "reputation-mangement": {
+  "reputation-management": {
     hero_section: {
       service: "Reputation Management",
       heading: "MAINTAIN AND ENHANCE YOUR ONLINE REPUTATION",
