@@ -17,7 +17,7 @@ export const AuroraHero = () => {
     useEffect(() => {
         animate(color, COLORS_TOP, {
             ease: "easeInOut",
-            duration: 1,
+            duration: 5,
             repeat: Infinity,
             repeatType: "mirror",
         });
